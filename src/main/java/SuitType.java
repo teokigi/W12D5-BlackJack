@@ -4,7 +4,3 @@ public enum SuitType {
     SPADES,
     CLUBS
 }
-
-
-
-//SuitType[] suit = SuitType.values();

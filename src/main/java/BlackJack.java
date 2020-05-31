@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class GameHighCard {
+public class BlackJack {
 
 
     private ArrayList<Player> players;
 
-    public GameHighCard() {
+    public BlackJack() {
         this.players = new ArrayList<Player>();
     }
 

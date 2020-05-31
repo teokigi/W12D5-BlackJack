@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public class GameHighCardTest {
+public class BlackJackTest {
 
-    GameHighCard game;
+    BlackJack game;
     Player player1;
     Player player2;
     Player player3;
@@ -16,7 +16,7 @@ public class GameHighCardTest {
 
     @Before
     public void before() {
-        game = new GameHighCard();
+        game = new BlackJack();
         player1 = new Player("Dave");
         player2 = new Player("Dom");
         player3 = new Player("Darlene");
