@@ -37,20 +37,25 @@ public class BlackJackTest {
     }
 
     @Test
-    public void canDealCards(){
+    public void canDealTwoCards(){
+        // 2 players starts with 2 dealt cards.
         game.addPlayer(player1);
         game.addPlayer(player2);
         game.addPlayer(player3);
         game.dealCards(deck);
-        assertEquals(1, game.getPlayers().get(0).getHand().size());
+        assertEquals(2, game.getPlayers().get(0).getHand().size());
+    }
+
+    @Test
+    public void canTwist(){
+        //user choosing twist will receive a card
+        game.addPlayer(player1);
+        game.dealCards(deck);
+        game.twist(player1, deck);
+        assertEquals(3,game.getPlayers().get(0).getHand().size());
     }
     //test needs to:
-    // note: Dealer is player 1,
-    // note: 2 Additional players are pitted against dealer
 
-    // 2 players starts with 2 dealt cards.
-    // Dealer 2nd card is revealed.
-    // Each player twists or sticks
     // BJ - player3 will twist till over 21 and go bust
 
     // Runner>BJ - bust players automatically lose.

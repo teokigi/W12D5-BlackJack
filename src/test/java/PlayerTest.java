@@ -1,7 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class PlayerTest {
 
@@ -55,6 +55,16 @@ public class PlayerTest {
         player.addCard(card);
         assertEquals(12,player.getHandTotal());
 
+    }
+
+    @Test
+    public void checkBustStatus(){
+        //check if player is bust
+        assertTrue(player.isPlayerSafe());
+        player.addCard(card2);
+        player.addCard(card2);
+        player.addCard(card2);
+        assertFalse(player.isPlayerSafe());
     }
 
 

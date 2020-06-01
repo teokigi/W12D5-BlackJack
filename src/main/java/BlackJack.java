@@ -22,8 +22,14 @@ public class BlackJack {
     public void dealCards(Deck deck) {
         for (Player player : this.players) {
             player.addCard(deck.dealCard());
+            player.addCard(deck.dealCard());
         }
     }
+
+    public void twist(Player player,Deck deck){
+        player.addCard(deck.dealCard());
+    }
+
 
 //    public ArrayList<Player> getWinner() {
 //        ArrayList<Player> winners;

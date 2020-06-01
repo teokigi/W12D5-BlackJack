@@ -43,4 +43,12 @@ public class Player {
         }
         return handTotal;
     }
+
+    public boolean isPlayerSafe(){
+        if (getHandTotal() <= 21){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
