@@ -26,4 +26,21 @@ public class Player {
     public void clearHand() {
         this.hand.clear();
     }
+
+    public int getHandTotal() {
+        int handTotal = 0;
+        boolean hasAce = false;
+            for (Card card : hand) {
+                handTotal += card.getValueFromEnum();
+                if (card.getRank() == RankType.ACE) {
+                    hasAce = true;
+                }
+            }
+
+        if ((hasAce == true) && ( handTotal <= 11)){
+            handTotal += 10;
+
+        }
+        return handTotal;
+    }
 }

@@ -17,12 +17,11 @@ public class BlackJackTest {
     @Before
     public void before() {
         game = new BlackJack();
-        player1 = new Player("Dave");
+        player1 = new Player("Dealer");
         player2 = new Player("Dom");
         player3 = new Player("Darlene");
         deck = new Deck();
         deck.populateDeck();
-//        deck.shuffleDeck();
 
     }
 
@@ -45,15 +44,29 @@ public class BlackJackTest {
         game.dealCards(deck);
         assertEquals(1, game.getPlayers().get(0).getHand().size());
     }
+    //test needs to:
+    // note: Dealer is player 1,
+    // note: 2 Additional players are pitted against dealer
 
-    @Test
-    public void canGetWinner(){
-        game.addPlayer(player1);
-        game.addPlayer(player2);
-        game.addPlayer(player3);
-        game.dealCards(deck);
-        ArrayList<Player> winners = game.getWinner();
-        assertEquals(1, winners.size());
-    }
+    // 2 players starts with 2 dealt cards.
+    // Dealer 2nd card is revealed.
+    // Each player twists or sticks
+    // BJ - player3 will twist till over 21 and go bust
+
+    // Runner>BJ - bust players automatically lose.
+    // Runner>BJ dealer will autoplay, twisting if handvalue < 16
+    // players who haven't gone bust yet will be pitted against
+    // dealer
+
+
+//    @Test
+//    public void canGetWinner(){
+//        game.addPlayer(player1);
+//        game.addPlayer(player2);
+//        game.addPlayer(player3);
+//        game.dealCards(deck);
+//        ArrayList<Player> winners = game.getWinner();
+//        assertEquals(1, winners.size());
+//    }
 
 }

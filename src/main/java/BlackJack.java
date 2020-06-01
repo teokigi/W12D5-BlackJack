@@ -4,7 +4,7 @@ import java.util.Collection;
 public class BlackJack {
 
 
-    private ArrayList<Player> players;
+    private final ArrayList<Player> players;
 
     public BlackJack() {
         this.players = new ArrayList<Player>();
@@ -25,19 +25,19 @@ public class BlackJack {
         }
     }
 
-    public ArrayList<Player> getWinner() {
-        ArrayList<Player> winners;
-        winners = new ArrayList<Player>();
-        int winningValue = 0;
-        for (Player player : this.players) {
-            int playerCardValue = player.getHand().get(0).getValueFromEnum();
-             if (winningValue < playerCardValue){
-                    winners.add(player);
-                    winningValue = playerCardValue;
-             } else if (winningValue == playerCardValue) {
-                 winners.add(player);
-             }
-        }
-        return winners;
-    }
+//    public ArrayList<Player> getWinner() {
+//        ArrayList<Player> winners;
+//        winners = new ArrayList<Player>();
+//        int winningValue = 0;
+//        for (Player player : this.players) {
+//            int playerCardValue = player.getHand().get(0).getValueFromEnum();
+//             if (winningValue < playerCardValue){
+//                    winners.add(player);
+//                    winningValue = playerCardValue;
+//             } else if (winningValue == playerCardValue) {
+//                 winners.add(player);
+//             }
+//        }
+//        return winners;
+//    }
 }
