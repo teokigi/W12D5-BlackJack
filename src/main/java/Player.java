@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Player {
 
     private final String name;
-    private ArrayList<Card> hand;
+    private final ArrayList<Card> hand;
 
     public Player(String name) {
         this.name = name;
